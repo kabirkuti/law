@@ -1,0 +1,2115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justice Law - Your Trusted Legal Partner</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1208/1208147.png" type="image/x-icon">
+    
+    <!-- External CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- AOS Library for scroll animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-gold: #F0C871;
+            --dark-gold: #D4AF37;
+            --rich-black: #0D1117;
+            --soft-black: #1a1a1a;
+            --text-light: #e6e6e6;
+            --text-muted: #888;
+            --gradient-primary: linear-gradient(135deg, #F0C871 0%, #D4AF37 100%);
+            --gradient-dark: linear-gradient(135deg, #1a1a1a 0%, #0D1117 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--rich-black);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+/* CSS Variables */
+:root {
+    --primary-gold: #f0c871;
+    --rich-black: #0d1117;
+    --text-light: #e6edf3;
+    --gradient-primary: linear-gradient(135deg, #f0c871, #ffdc73);
+}
+
+/* Enhanced Navbar */
+.navbar-custom {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(13, 17, 23, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(240, 200, 113, 0.1);
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+}
+
+.navbar-custom.scrolled {
+    background: rgba(13, 17, 23, 0.98);
+    padding: 0.5rem 0;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--rich-black);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 25px rgba(240, 200, 113, 0.3);
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-gold);
+    text-decoration: none;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    left: 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--rich-black);
+    transform: translateY(-2px);
+    width: 90px;
+}
+
+.nav-link i {
+    margin-right: 0.5rem;
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* Tablets (width ≤ 992px) */
+@media (max-width: 992px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .logo-text {
+        font-size: 1.5rem;
+    }
+    
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Devices (width ≤ 768px) */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem 1rem;
+    }
+    
+    .logo-section {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        width: 50%;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    .nav-link {
+        width: 100%;
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* Extra Small Devices (width ≤ 480px) */
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 1.3rem;
+    }
+    
+    .logo-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.95rem;
+        padding: 0.6rem 0.9rem;
+    }
+}
+
+        /* Enhanced Hero Section */
+        .hero-section {
+            height: 100vh;
+            background: 
+                        url('https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixlib=rb-4.0.3') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(240, 200, 113, 0.1) 0%, transparent 70%);
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero-section .lead {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+        }
+
+        .btn-gold {
+            background: var(--gradient-primary);
+            border: none;
+            color: var(--rich-black);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin-right: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-gold::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #D4AF37 0%, #F0C871 100%);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn-gold:hover::before {
+            left: 0;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(240, 200, 113, 0.4);
+            color: var(--rich-black);
+        }
+
+        .btn-outline-light {
+            border: 2px solid var(--primary-gold);
+            color: var(--primary-gold);
+            background: transparent;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-light:hover {
+            background: var(--primary-gold);
+            color: var(--rich-black);
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        .legal-fullscreen-section {
+            padding: 8rem 2rem;
+            background: var(--soft-black);
+        }
+
+        .legal-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .legal-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .legal-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .legal-header h2 {
+            font-size: 2rem;
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        .text-highlight {
+            color: var(--primary-gold);
+        }
+
+        .legal-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .legal-img img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .legal-text h3 {
+            font-size: 2rem;
+            color: var(--primary-gold);
+            margin-bottom: 1rem;
+        }
+
+        .legal-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .legal-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .since-box {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .square {
+            width: 30px;
+            height: 30px;
+            background: var(--gradient-primary);
+            border-radius: 8px;
+        }
+
+        .since-text h4 {
+            font-size: 2rem;
+            color: var(--primary-gold);
+            margin: 0;
+        }
+
+        .learn-btn {
+            color: var(--primary-gold);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .learn-btn:hover {
+            color: var(--text-light);
+            transform: translateX(10px);
+        }
+
+        /* Lawyer Info Section */
+        .lawyer-info {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, rgba(13, 17, 23, 0.9), rgba(26, 26, 26, 0.8)),
+                        url('https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3') center/cover;
+            text-align: center;
+            position: relative;
+        }
+
+        .lawyer-info .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .lawyer-info .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .main-heading {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            line-height: 1.3;
+        }
+
+        .highlight {
+            color: var(--primary-gold);
+        }
+
+        .bold-hover {
+            color: var(--text-light);
+            transition: color 0.3s ease;
+        }
+
+        .bold-hover:hover {
+            color: var(--primary-gold);
+        }
+
+        /* Practice Areas Section */
+        .section {
+            padding: 8rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            font-size: 3rem;
+            color: var(--primary-gold);
+            margin-bottom: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(240, 200, 113, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card-titless {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+            color: white;
+            padding: 2rem 1rem 1rem;
+            font-weight: 600;
+        }
+
+        .right h3 {
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .right p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .right .btn {
+            background: var(--gradient-primary);
+            border: none;
+            color: var(--rich-black);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .right .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(240, 200, 113, 0.4);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: var(--soft-black);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .stats-number {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Why Choose Us Section */
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            color: var(--primary-gold);
+            margin: 4rem 0;
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .info-card {
+            background: var(--soft-black);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(240, 200, 113, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(240, 200, 113, 0.1) 0%, transparent 100%);
+            transition: left 0.3s ease;
+            z-index: 0;
+        }
+
+        .info-card:hover::before {
+            left: 0;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-gold);
+            box-shadow: 0 20px 40px rgba(240, 200, 113, 0.2);
+        }
+
+        .info-card i {
+            font-size: 3rem;
+            color: var(--primary-gold);
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-card h5 {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-card p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* FAQ Section */
+        .law-justice-faq-section {
+            padding: 8rem 2rem;
+            background: var(--soft-black);
+        }
+
+        .law-justice-decoration {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .law-justice-decoration i {
+            font-size: 4rem;
+            color: var(--primary-gold);
+        }
+
+        .law-justice-faq-title {
+            text-align: center;
+            font-size: 3rem;
+            color: var(--text-light);
+            margin-bottom: 4rem;
+        }
+
+        .law-justice-faq-item {
+            background: var(--rich-black);
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(240, 200, 113, 0.1);
+            overflow: hidden;
+        }
+
+        .law-justice-faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            padding: 1.5rem;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .law-justice-faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--primary-gold);
+            transition: transform 0.3s ease;
+        }
+
+        .law-justice-faq-question.active::after {
+            transform: rotate(45deg);
+        }
+
+        .law-justice-faq-question:hover {
+            background: rgba(240, 200, 113, 0.1);
+        }
+
+        .law-justice-faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .law-justice-faq-answer.active {
+            max-height: 200px;
+        }
+
+        .law-justice-faq-answer p {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+    
+        /* CTA Section */
+        .law-justice-hero-section {
+            padding: 8rem 2rem;
+            background: linear-gradient(135deg, var(--soft-black) 0%, var(--rich-black) 100%);
+            text-align: center;
+        }
+
+        .law-justice-hero-content .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .law-justice-tagline {
+            color: var(--primary-gold);
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .law-justice-title {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .law-justice-subtitle {
+            font-size: 4rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+        }
+
+        .law-justice-cta-button {
+            background: var(--gradient-primary);
+            border: none;
+            color: var(--rich-black);
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .law-justice-cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(240, 200, 113, 0.4);
+            color: var(--rich-black);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .navbar-container {
+                padding: 0 1rem;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .legal-body {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 4rem 1rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mains-containeress {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-section {
+                padding: 2rem;
+            }
+            
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: var(--gradient-primary);
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
+
+        /* Search Bar Styles */
+        .search-bar {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(13, 17, 23, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 2rem;
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .search-bar.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .search-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-form {
+            display: flex;
+            align-items: center;
+            background: var(--soft-black);
+            border-radius: 50px;
+            padding: 0.5rem;
+            border: 1px solid rgba(240, 200, 113, 0.3);
+        }
+
+        .search-input {
+            flex: 1;
+            background: none;
+            border: none;
+            padding: 1rem 1.5rem;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            outline: none;
+        }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .search-submit {
+            background: var(--gradient-primary);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--rich-black);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-submit:hover {
+            transform: scale(1.1);
+        }
+
+        .search-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: none;
+            border: none;
+            color: var(--primary-gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-close:hover {
+            transform: rotate(90deg);
+        }
+
+        /* Mobile Toggle Styles */
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .mobile-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-gold);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: flex;
+            }
+        }
+
+
+        /* Extra Mobile Responsiveness for devices < 480px */
+@media (max-width: 480px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1rem;
+  }
+
+  .btn-gold,
+  .btn-outline-light,
+  .law-justice-cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .legal-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .legal-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .legal-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .main-heading,
+  .law-justice-faq-title,
+  .law-justice-title,
+  .law-justice-subtitle,
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .card img {
+    height: 160px;
+  }
+
+  .search-form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-input {
+    padding: 0.8rem 1rem;
+  }
+
+  .search-submit {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+  }
+
+  .info-cards {
+    gap: 1rem;
+  }
+
+  .stats-number {
+    font-size: 2.5rem;
+  }
+}
+/* Hide nav-menu on small screens unless active */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(13, 17, 23, 0.95);
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
+
+
+
+
+/* ==================== COMPREHENSIVE MEDIA QUERIES ==================== */
+
+/* Large Tablets and Small Desktops (width ≤ 1200px) */
+@media (max-width: 1200px) {
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+    
+    .legal-header h1 {
+        font-size: 3rem;
+    }
+    
+    .main-heading,
+    .law-justice-title,
+    .law-justice-subtitle {
+        font-size: 3.5rem;
+    }
+    
+    .section {
+        padding: 6rem 2rem;
+    }
+}
+
+/* Tablets (width ≤ 992px) */
+@media (max-width: 992px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .logo-text {
+        font-size: 1.5rem;
+    }
+    
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1.3rem;
+    }
+    
+    .legal-body {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .legal-img img {
+        height: 400px;
+    }
+    
+    .section {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 5rem 2rem;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .main-heading {
+        font-size: 2.5rem;
+    }
+    
+    .stats-number {
+        font-size: 3rem;
+    }
+}
+
+/* Mobile Devices (width ≤ 768px) */
+@media (max-width: 768px) {
+    /* Navigation */
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem 1rem;
+        position: relative;
+    }
+    
+    .logo-section {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        background: rgba(13, 17, 23, 0.98);
+        border-radius: 10px;
+        padding: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-link {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-radius: 8px;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+        width: 100%;
+    }
+    
+    .mobile-toggle {
+        display: flex;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding: 2rem 1rem;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+    
+    .hero-section .lead {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn-gold,
+    .btn-outline-light {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    /* About Section */
+    .legal-fullscreen-section {
+        padding: 4rem 1rem;
+    }
+    
+    .legal-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .legal-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .legal-body {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .legal-img img {
+        height: 300px;
+    }
+    
+    .legal-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .legal-footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    /* Lawyer Info Section */
+    .lawyer-info {
+        padding: 4rem 1rem;
+    }
+    
+    .main-heading {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    /* Practice Areas */
+    .section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 4rem 1rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .card img {
+        height: 180px;
+    }
+    
+    .card-titless {
+        padding: 1.5rem 1rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Stats Section */
+    .stats-section {
+        padding: 4rem 1rem;
+    }
+    
+    .stats-section .row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .stats-number {
+        font-size: 2.5rem;
+    }
+    
+    /* Why Choose Us */
+    .section-title {
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+    
+    .info-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .info-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    /* FAQ Section */
+    .law-justice-faq-section {
+        padding: 4rem 1rem;
+    }
+    
+    .law-justice-faq-title {
+        font-size: 2rem;
+    }
+    
+    .law-justice-faq-question {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .law-justice-faq-question::after {
+        right: 1rem;
+    }
+    
+    .law-justice-faq-answer p {
+        padding: 0 1rem 1rem;
+    }
+    
+    /* CTA Section */
+    .law-justice-hero-section {
+        padding: 4rem 1rem;
+    }
+    
+    .law-justice-title,
+    .law-justice-subtitle {
+        font-size: 2rem;
+    }
+    
+    .law-justice-cta-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    
+    /* Search Bar */
+    .search-bar {
+        padding: 1rem;
+    }
+    
+    .search-form {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 15px;
+    }
+    
+    .search-input {
+        padding: 1rem;
+        border-radius: 10px;
+        background: var(--rich-black);
+        border: 1px solid rgba(240, 200, 113, 0.3);
+    }
+    
+    .search-submit {
+        width: 100%;
+        height: 45px;
+        border-radius: 10px;
+    }
+}
+
+/* Small Mobile Devices (width ≤ 480px) */
+@media (max-width: 480px) {
+    /* Navigation */
+    .navbar-container {
+        padding: 0.5rem;
+    }
+    
+    .logo-text {
+        font-size: 1.3rem;
+    }
+    
+    .logo-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+    
+    /* Hero Section */
+    .hero-section h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .btn-gold,
+    .btn-outline-light,
+    .law-justice-cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    /* About Section */
+    .legal-fullscreen-section {
+        padding: 3rem 0.5rem;
+    }
+    
+    .legal-header h1 {
+        font-size: 2rem;
+    }
+    
+    .legal-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .legal-text h3 {
+        font-size: 1.3rem;
+    }
+    
+    .legal-text p {
+        font-size: 1rem;
+    }
+    
+    .legal-img img {
+        height: 250px;
+    }
+    
+    /* Lawyer Info */
+    .lawyer-info {
+        padding: 3rem 0.5rem;
+    }
+    
+    .main-heading {
+        font-size: 1.5rem;
+    }
+    
+    /* Sections */
+    .section {
+        padding: 3rem 0.5rem;
+    }
+    
+    .section h2 {
+        font-size: 2rem;
+    }
+    
+    .right h3 {
+        font-size: 1.8rem;
+    }
+    
+    .card img {
+        height: 150px;
+    }
+    
+    .card-titless {
+        font-size: 0.8rem;
+        padding: 1rem 0.8rem 0.8rem;
+    }
+    
+    /* Stats */
+    .stats-section {
+        padding: 3rem 0.5rem;
+    }
+    
+    .stats-number {
+        font-size: 2rem;
+    }
+    
+    /* Info Cards */
+    .info-cards {
+        padding: 0.5rem;
+    }
+    
+    .info-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .info-card i {
+        font-size: 2rem;
+    }
+    
+    .info-card h5 {
+        font-size: 1.2rem;
+    }
+    
+    /* FAQ */
+    .law-justice-faq-section {
+        padding: 3rem 0.5rem;
+    }
+    
+    .law-justice-faq-title {
+        font-size: 1.5rem;
+    }
+    
+    .law-justice-faq-question {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+    
+    .law-justice-faq-answer p {
+        padding: 0 0.8rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    /* CTA */
+    .law-justice-hero-section {
+        padding: 3rem 0.5rem;
+    }
+    
+    .law-justice-tagline {
+        font-size: 1rem;
+    }
+    
+    .law-justice-title,
+    .law-justice-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    /* Section Titles */
+    .section-title,
+    .law-justice-faq-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Extra Small Devices (width ≤ 360px) */
+@media (max-width: 360px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .legal-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .main-heading,
+    .law-justice-title,
+    .law-justice-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .stats-number {
+        font-size: 1.8rem;
+    }
+    
+    .btn-gold,
+    .btn-outline-light,
+    .law-justice-cta-button {
+        padding: 0.7rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .navbar-container {
+        padding: 0.3rem;
+    }
+    
+    .legal-fullscreen-section,
+    .lawyer-info,
+    .section,
+    .stats-section,
+    .law-justice-faq-section,
+    .law-justice-hero-section {
+        padding: 2rem 0.3rem;
+    }
+}
+
+/* Landscape Mobile Devices */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        height: auto;
+        min-height: 80vh;
+        padding: 2rem 1rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .navbar-custom {
+        padding: 0.3rem 0;
+    }
+    
+    .legal-fullscreen-section,
+    .lawyer-info,
+    .section {
+        padding: 3rem 1rem;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo-icon,
+    .card img,
+    .legal-img img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar-custom,
+    .scroll-progress,
+    .search-bar,
+    .mobile-toggle,
+    .btn-gold,
+    .btn-outline-light,
+    .law-justice-cta-button {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .hero-section,
+    .legal-fullscreen-section,
+    .lawyer-info,
+    .section,
+    .stats-section,
+    .law-justice-faq-section,
+    .law-justice-hero-section {
+        padding: 2rem 1rem !important;
+        page-break-inside: avoid;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Enhanced Navbar -->
+    <nav class="navbar-custom" id="navbar">
+        <div class="navbar-container">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+          
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="#legal-partner" class="nav-link"><i class="fas fa-info-circle"></i>About</a></li>
+                <li><a href="#practice" class="nav-link"><i class="fas fa-gavel"></i>Practice</a></li>
+                <li><a href="#services" class="nav-link"><i class="fas fa-briefcase"></i>Services</a></li>
+                <li><a href="#news" class="nav-link"><i class="fas fa-newspaper"></i>News</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+       
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="animate__animated animate__fadeInDown">
+                <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <i class="bi bi-chat-dots-fill" style="margin-right: 0.5rem; font-size: 1.25rem; color: #f0c871"></i>
+                    <span class="text-gold" style="font-weight: 600">Need any help..?</span>
+                </div>
+                <h1>Your Strategic Legal<br>Partner</h1>
+                <p class="lead">Your Rights. Our Mission.</p>
+                <div style="margin-top: 1.5rem">
+                    <a href="#contact" class="btn-gold">Book Consultant</a>
+                    <a href="#services" class="btn-outline-light">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="legal-fullscreen-section" id="legal-partner">
+        <div class="legal-container" data-aos="fade-up">
+            <!-- Header -->
+            <div class="legal-header" data-aos="fade-down">
+                <h1>About us</h1>
+                <h2>Your Trusted Partner for Reliable <span class="text-highlight">Legal Solutions</span></h2>
+            </div>
+
+            <!-- Content -->
+            <div class="legal-body">
+                <!-- Image -->
+                <div class="legal-img" data-aos="zoom-in">
+                    <img src="https://legaldesire.com/wp-content/uploads/2021/04/AdobeStock_205600667.jpeg" alt="Lawyer">
+                </div>
+
+                <!-- Text -->
+                <div class="legal-text" data-aos="fade-left">
+                    <h3>Adv. Aditya Kashyab</h3>
+                    <p>With experienced attorneys who can handle a broad range of complex legal issues for businesses, governmental entities, organizations, professionals, and individuals at the local, regional, and national levels. Through more than 130 years of practicing law, the firm has developed the deep knowledge base and sound judgment that delivers value to our clients.</p>
+
+                    <div class="legal-footer">
+                        <div class="since-box" data-aos="fade-up-right">
+                            <div class="square"></div>
+                            <div class="since-text">
+                                <p>Since</p>
+                                <h4>2015</h4>
+                            </div>
+                        </div>
+                        <a href="#" class="learn-btn" data-aos="zoom-in-up">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lawyer Info Section -->
+    <section class="lawyer-info" id="lawyer-info">
+        <div class="overlay"></div>
+        <div class="container content" data-aos="zoom-in-up" data-aos-duration="1200">
+            <h2 class="main-heading" data-aos="fade-up" data-aos-delay="100">
+                <span class="highlight">Fighting for Justice, Securing Your Future:</span><br>
+                <span class="bold-hover">Trusted Advocates for Personal Injury Victims</span>
+            </h2>
+            <p class="lead" data-aos="fade-up" data-aos-delay="300">
+                We are dedicated to protecting your rights and ensuring that you get the justice you deserve. With years of experience and a passion for helping our clients, we're here to guide you through every step of the legal process.
+            </p>
+        </div>
+    </section>
+
+    <!-- Practice Areas Section -->
+    <section class="section" id="practice">
+        <div class="left" data-aos="fade-right">
+            <h2>Practice Areas</h2>
+            <div class="grid">
+                <div class="card" data-aos="zoom-in">
+                    <img src="https://drarvindersingh.com/wp-content/uploads/2023/12/Importance-of-Medical-Law-and-Ethics-in-Indian-Healthcare.jpg" alt="Medical">
+                    <div class="card-titless">Medical & Health Care</div>
+                </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwaJU9YKyeXpHYeA65bGXfC1vUuvRuND0GFQ&s" alt="Construction">
+                    <div class="card-titless">Construction Accidents</div>
+                </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://blog.ipleaders.in/wp-content/uploads/2016/12/The-ins-and-outs-of-family-law.jpg" alt="Family">
+                    <div class="card-titless">Family & Marriage</div>
+                </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQogWZlgkkcmgCClz7yCp6EklNH9yzinx4cLA&s" alt="Vehicle">
+                    <div class="card-titless">Vehicle Accidents</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right" data-aos="fade-left">
+            <h3>Reputation. Respect. Result.</h3>
+            <p>Over the years, our firm has been proud to represent clients with professionalism, integrity and zeal. We continue our tradition of providing a complete and diverse offering of legal services to our clients.</p>
+            <p>Our experienced team handles complex legal matters with dedication and expertise, ensuring that each client receives personalized attention and effective representation.</p>
+            <p>We believe in building lasting relationships with our clients based on trust, transparency, and successful outcomes that exceed expectations.</p>
+            <button class="btn">View all Areas</button>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section container-fluid" id="services">
+        <div class="row text-center">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="stats-number">10+</div>
+                <div>Years Experience</div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="stats-number">20+</div>
+                <div>Awards & Honor</div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="stats-number">98%</div>
+                <div>Happy Clients</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <h2 class="section-title" data-aos="fade-up">Why Choose Us</h2>
+
+    <section class="info-cards container">
+        <div class="info-card text-center" data-aos="fade-up">
+            <i class="bi bi-person-badge"></i>
+            <h5>Proven Experts</h5>
+            <p>Our team of seasoned legal experts brings extensive knowledge and experience to navigate complex regulatory challenges effectively.</p>
+        </div>
+        <div class="info-card text-center" data-aos="fade-up" data-aos-delay="100">
+            <i class="bi bi-journal-check"></i>
+            <h5>Proven Track Record</h5>
+            <p>With years of success in handling complex legal matters, we have earned a reputation for delivering effective and timely results.</p>
+        </div>
+        <div class="info-card text-center" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-gear-wide-connected"></i>
+            <h5>Tailored Approach</h5>
+            <p>Expertly Tailored Legal Solutions Designed to Meet Your Unique, Specific Needs and Drive Meaningful Outcomes.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="law-justice-faq-section" id="news">
+        <div class="container">
+            <div class="law-justice-decoration" data-aos="fade-up">
+                <i class="fas fa-balance-scale"></i>
+            </div>
+            <h2 class="law-justice-faq-title" data-aos="fade-up">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="law-justice-faq-item" data-aos="fade-up">
+                        <button class="law-justice-faq-question" onclick="toggleFaq(this)">
+                            What services does Justice Law offer?
+                        </button>
+                        <div class="law-justice-faq-answer">
+                            <p>We provide corporate law, litigation, legal consultation, contracts, family law, personal injury, and comprehensive legal representation across multiple practice areas.</p>
+                        </div>
+                    </div>
+                    <div class="law-justice-faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <button class="law-justice-faq-question" onclick="toggleFaq(this)">
+                            How can I schedule a consultation?
+                        </button>
+                        <div class="law-justice-faq-answer">
+                            <p>Click "Book Consultant", call us directly, or use our contact form to schedule a session. We offer both in-person and virtual consultations.</p>
+                        </div>
+                    </div>
+                    <div class="law-justice-faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <button class="law-justice-faq-question" onclick="toggleFaq(this)">
+                            What industries do you serve?
+                        </button>
+                        <div class="law-justice-faq-answer">
+                            <p>We serve technology, healthcare, finance, real estate, manufacturing, and many other sectors with specialized legal expertise.</p>
+                        </div>
+                    </div>
+                    <div class="law-justice-faq-item" data-aos="fade-up" data-aos-delay="300">
+                        <button class="law-justice-faq-question" onclick="toggleFaq(this)">
+                            What are your consultation fees?
+                        </button>
+                        <div class="law-justice-faq-answer">
+                            <p>We offer competitive rates and flexible payment options. Contact us for detailed pricing information tailored to your specific legal needs.</p>
+                        </div>
+                    </div>
+                    <div class="law-justice-faq-item" data-aos="fade-up" data-aos-delay="400">
+                        <button class="law-justice-faq-question" onclick="toggleFaq(this)">
+                            Do you handle emergency legal matters?
+                        </button>
+                        <div class="law-justice-faq-answer">
+                            <p>Yes, we provide emergency legal services and are available for urgent matters that require immediate legal attention and intervention.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="law-justice-hero-section">
+        <div class="law-justice-hero-content">
+            <div class="floating" data-aos="fade-up">
+                <p class="law-justice-tagline">get started today</p>
+                <h1 class="law-justice-title">Let Justice Be Your</h1>
+                <h2 class="law-justice-subtitle">Trusted Legal Partner</h2>
+                <a href="tel:8788209773" class="law-justice-cta-button">
+                    <i class="fas fa-calendar-alt me-2"></i>Book Consultant
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Scroll Progress Bar
+        function updateScrollProgress() {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+        }
+
+        // Navbar scroll effect
+        function handleNavbarScroll() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        function smoothScroll() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId.startsWith('#')) {
+                        const targetSection = document.querySelector(targetId);
+                        if (targetSection) {
+                            const offsetTop = targetSection.offsetTop - 100;
+                            window.scrollTo({
+                                top: offsetTop,
+                                behavior: 'smooth'
+                            });
+                            
+                            // Update active link
+                            navLinks.forEach(nl => nl.classList.remove('active'));
+                            this.classList.add('active');
+                        }
+                    }
+                });
+            });
+        }
+
+        // Search functionality
+        function initializeSearch() {
+            const searchToggle = document.getElementById('searchToggle');
+            const searchClose = document.getElementById('searchClose');
+            const searchBar = document.getElementById('searchBar');
+            const searchInput = document.getElementById('searchInput');
+
+            searchToggle.addEventListener('click', () => {
+                searchBar.classList.add('active');
+                setTimeout(() => searchInput.focus(), 300);
+            });
+
+            searchClose.addEventListener('click', () => {
+                searchBar.classList.remove('active');
+            });
+
+            // Close search on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && searchBar.classList.contains('active')) {
+                    searchBar.classList.remove('active');
+                }
+            });
+        }
+
+        // Mobile menu toggle
+        function initializeMobileMenu() {
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            mobileToggle.addEventListener('click', () => {
+                mobileToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // FAQ toggle functionality
+        function toggleFaq(button) {
+            const faqItem = button.parentElement;
+            const answer = faqItem.querySelector('.law-justice-faq-answer');
+            const isActive = button.classList.contains('active');
+
+            // Close all other FAQ items
+            document.querySelectorAll('.law-justice-faq-question').forEach(q => {
+                q.classList.remove('active');
+                q.parentElement.querySelector('.law-justice-faq-answer').classList.remove('active');
+            });
+
+            // Toggle current item
+            if (!isActive) {
+                button.classList.add('active');
+                answer.classList.add('active');
+            }
+        }
+
+        // Contact form submission
+        function initializeContactForm() {
+            const contactForm = document.getElementById('contactForm');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const formValues = Object.fromEntries(formData);
+                
+                // Simulate form submission
+                const submitButton = this.querySelector('.btn-send');
+                const originalText = submitButton.innerHTML;
+                
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+                submitButton.disabled = true;
+                
+                setTimeout(() => {
+                    submitButton.innerHTML = '<i class="fas fa-check me-2"></i>Message Sent!';
+                    
+                    setTimeout(() => {
+                        submitButton.innerHTML = originalText;
+                        submitButton.disabled = false;
+                        this.reset();
+                    }, 2000);
+                }, 1500);
+            });
+        }
+
+        // Intersection Observer for active navigation
+        function initializeIntersectionObserver() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const currentId = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${currentId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, {
+                threshold: 0.3,
+                rootMargin: '-100px 0px -100px 0px'
+            });
+
+            sections.forEach(section => observer.observe(section));
+        }
+
+        // Add scroll event listeners
+        window.addEventListener('scroll', () => {
+            updateScrollProgress();
+            handleNavbarScroll();
+        });
+
+        // Initialize all functionality when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            smoothScroll();
+            initializeSearch();
+            initializeMobileMenu();
+            initializeContactForm();
+            initializeIntersectionObserver();
+            updateScrollProgress();
+            handleNavbarScroll();
+        });
+
+        // Add some interactive effects
+        document.addEventListener('mousemove', function(e) {
+            const circles = document.querySelectorAll('.floating-circle');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            circles.forEach((circle, index) => {
+                const speed = (index + 1) * 0.5;
+                circle.style.transform = `translate(${x * speed * 20}px, ${y * speed * 20}px)`;
+            });
+        });
+
+        // Add typing effect to hero section
+        function typeWriter(element, text, speed = 100, callback) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else if (callback) {
+                    callback();
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effect after page load
+        window.addEventListener('load', function() {
+            const heroTitle = document.querySelector('.hero-section h1');
+            if (heroTitle) {
+                const originalText = heroTitle.textContent;
+                setTimeout(() => {
+                    typeWriter(heroTitle, originalText, 80);
+                }, 1000);
+            }
+        });  document.addEventListener("DOMContentLoaded", function () {
+    const mobileToggle = document.getElementById("mobileToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    mobileToggle.addEventListener("click", function () {
+      mobileToggle.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+  })
+    </script>
+</body>
+</html>
